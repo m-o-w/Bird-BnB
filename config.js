@@ -1,143 +1,153 @@
-// Configuration file for Bird BnB website
+// Configuration file for Love For Cockatiels website
 const CONFIG = {
     // Business Information
     business: {
-        name: "Bird BnB",
-        tagline: "Pet Bird Boarding & Care",
-        location: "Delhi",
+        name: "Love For Cockatiels",
+        tagline: "Hand-Raised & Tamed Pet Birds",
+        location: "India",
         country: "India"
     },
 
     // Contact Information
     contact: {
-        phone: "9643394044",
-        whatsapp: "919643394044",
-        whatsappMessage: "Hi, I'm interested in boarding my bird."
+        phone: "+91 72910 20221",
+        whatsapp: "917291020221",
+        whatsappMessage: "Hi, I'm interested in buying a hand-raised bird from Love For Cockatiels."
     },
 
     // Statistics
     stats: {
-        birdsCaredFor: "500+",
-        happyOwners: "200+",
+        birdsSold: "1000+",
+        happyOwners: "500+",
         yearsExperience: "5+",
-        location: "Delhi"
+        specialty: "Cockatiels"
+    },
+
+    // Google Reviews
+    google: {
+        profileUrl: "https://maps.app.goo.gl/2cMZRjKjA2bMjXkN8",
+        rating: "5.0",
+        reviewCount: "100+"
     },
 
     // Hero Section
     hero: {
-        badge: "🐦 Pet Bird Boarding & Care",
-        title: "A Safe <span class=\"text-emerald-500\">Nest</span> Away From Home",
-        description: "Leaving town? Let your feathered friends stay in our temperature-controlled, loving environment. Specialized care for all parrots and pet birds.",
-        heroImage: "https://images.unsplash.com/photo-1552728089-57bdde30beb8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        badge: "🐦 Hand-Raised & Tamed Pet Birds",
+        title: "Bring Home a <span class=\"text-emerald-500\">Feathered</span> Friend",
+        description: "Looking for a hand-raised, tamed, human-friendly bird? We specialize in cockatiels and other popular parrots — raised with love, ready to bond with you.",
+        heroImage: "images/hero-image.png"
     },
 
     // About Section
     about: {
         badge: "About Us",
-        title: "Delhi's Trusted Bird Boarding Service",
-        description1: "Located in the heart of Delhi, <strong>Bird BnB</strong> was founded by passionate bird lovers who understand the unique needs of avian companions. We've created a sanctuary where your feathered friends receive the same love and attention they get at home.",
-        description2: "Our team is trained in avian care, understanding the specific requirements of different bird species. From the right temperature settings to familiar feeding routines, we ensure your bird's stay is comfortable and stress-free.",
+        title: "Specialists in Hand-Raised Cockatiels & Parrots",
+        description1: "<strong>Love For Cockatiels</strong> is built on a passion for raising happy, healthy, human-friendly birds. We hand-raise every bird from a young age, ensuring they are tame, social, and ready to become a loving companion in your home.",
+        description2: "While cockatiels are our specialty, we also raise and offer other well-known parrots including Love Birds, Conures, African Greys, and Macaws. Every bird from us is nurtured with proper nutrition, socialization, and veterinary care.",
         whyChooseUs: {
             title: "Why Choose Us?",
             features: [
-                "Climate-controlled aviary environments",
-                "Personalized diet as per your instructions",
-                "Daily health monitoring & updates",
-                "Experienced avian care specialists",
-                "Safe, clean & stress-free housing",
-                "Convenient Delhi location"
+                "Hand-raised & fully tamed birds",
+                "Specialization in cockatiels",
+                "Human-friendly & social birds",
+                "Proper nutrition & veterinary care from day one",
+                "Guidance on bird care after purchase",
+                "Trusted by 500+ happy bird owners"
             ]
         }
     },
 
     // Services Section
     services: {
-        title: "Why Birds Love Us",
-        description: "We understand that birds aren't just pets; they are family. Our facility in Delhi is designed specifically for avian needs.",
+        title: "What Makes Our Birds Special",
+        description: "Every bird from Love For Cockatiels is hand-raised with dedication. Here's what sets us apart from the rest.",
         items: [
             {
-                icon: "ph-sun",
+                icon: "ph-hand-heart",
                 iconBg: "orange",
-                title: "Climate Controlled",
-                description: "Our facility maintains optimal temperature and humidity levels 24/7 to mimic a natural, comfortable environment for your birds, safe from Delhi's extreme weather."
-            },
-            {
-                icon: "ph-bowl-food",
-                iconBg: "green",
-                title: "Owner-Specified Diet",
-                description: "We strictly follow the diet plan you provide. Whether it's chop, pellets, or seeds, we ensure your bird eats exactly what they are used to."
+                title: "Hand-Raised From Day One",
+                description: "Our birds are hand-fed and handled daily from a young age. This ensures they grow up tame, trusting, and comfortable around humans — perfect companions from the start."
             },
             {
                 icon: "ph-heart",
+                iconBg: "green",
+                title: "Human-Friendly & Social",
+                description: "Every bird is socialized extensively. They step up on fingers, enjoy head scratches, and bond quickly with their new families. No wild or aggressive birds here."
+            },
+            {
+                icon: "ph-first-aid-kit",
                 iconBg: "blue",
-                title: "Love & Interaction",
-                description: "Birds are social creatures. We provide daily interaction, head scratches (if allowed!), and out-of-cage time based on your instructions."
+                title: "Health Guaranteed",
+                description: "All our birds receive proper nutrition, regular health checks, and are in excellent condition before going to their new homes. We provide care guidance to every new owner."
             }
         ]
     },
 
     // Gallery Section
     gallery: {
-        title: "Our Common Guests",
+        title: "Our Birds",
         birds: [
             {
-                name: "Budgies",
-                image: "https://images.unsplash.com/photo-1610058882042-494a827018c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-            },
-            {
                 name: "Cockatiels",
-                image: "https://images.unsplash.com/photo-1544605057-a99bdd632b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                image: "images/cockatiel-solo.png",
+                scale: 152,
+                align: "center"
             },
             {
                 name: "Love Birds",
-                image: "https://images.unsplash.com/photo-1608916325964-b0a5688536f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                image: "images/love-birds-pair.png",
+                scale: 92,
+                align: "center"
             },
             {
-                name: "Sun Conures",
-                image: "https://images.unsplash.com/photo-1596707328606-f6d34559c394?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                name: "Conures",
+                image: "images/conure-solo.png",
+                scale: 92,
+                align: "center"
             },
             {
                 name: "African Greys",
-                image: "https://images.unsplash.com/photo-1549557404-0c2d3080e21b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                name: "Ringnecks",
-                image: "https://images.unsplash.com/photo-1582260656910-c089f38c3592?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                image: "images/african-grey-solo.png",
+                scale: 127,
+                align: "center"
             },
             {
                 name: "Macaws",
-                image: "https://images.unsplash.com/photo-1517424641619-a991f2780e0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                image: "images/macaw-solo.png",
+                scale: 132,
+                align: "right"
             }
         ]
     },
 
-    // Liability Section
-    liability: {
-        title: "Terms of Boarding & Liability",
-        description: "At Bird BnB, we treat every bird with the utmost care, love, and professional attention. However, it is important to acknowledge that birds are sensitive livestock.",
-        terms: [
+    // Reviews / Trust Section (replaces Liability)
+    reviews: {
+        title: "Loved by Bird Parents Everywhere",
+        description: "Don't just take our word for it — our Google reviews speak for themselves. We're proud to have built a community of happy bird owners.",
+        googleProfileUrl: "https://maps.app.goo.gl/2cMZRjKjA2bMjXkN8",
+        highlights: [
             {
-                title: "Indemnification:",
-                text: "By using our services, the bird owner agrees to indemnify and hold harmless Bird BnB from any liability regarding sickness, injury, or death due to natural causes, stress, or pre-existing conditions."
+                title: "5-Star Rated",
+                text: "Consistently rated 5 stars on Google by verified buyers who love their new feathered companions."
             },
             {
-                title: "Veterinary Care:",
-                text: "In case of an emergency, we will attempt to contact you immediately. If unreachable, we will seek veterinary care at the owner's expense."
+                title: "Trusted Seller",
+                text: "Hundreds of happy customers across India trust Love For Cockatiels for healthy, tame, hand-raised birds."
             },
             {
-                title: "Dietary Risks:",
-                text: "We strictly follow the owner's provided diet plan and accept no liability for health issues arising from the specified diet."
+                title: "After-Sale Support",
+                text: "We don't just sell birds — we guide you through diet, care, and training so your bird thrives in its new home."
             }
         ],
-        disclaimer: "Complete terms will be provided in the boarding agreement form."
+        cta: "See Our Google Reviews"
     },
 
     // Footer/CTA Section
     footer: {
-        title: "Ready to Book a Stay?",
-        subtitle: "Give your bird a vacation while you take yours.",
-        copyright: "© 2024 Bird BnB. All rights reserved.",
-        locationText: "Located in Delhi, India."
+        title: "Ready to Bring Home a Feathered Friend?",
+        subtitle: "Get in touch to find your perfect companion bird.",
+        copyright: "© 2025 Love For Cockatiels. All rights reserved.",
+        locationText: "India"
     },
 
     // Animation Settings

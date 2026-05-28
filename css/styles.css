@@ -72,13 +72,80 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
 }
 
-/* Hero Pattern Background */
+/* Hero Pattern Background - animated drift */
 .hero-pattern {
     background-color: #ECFDF5;
     background-image: radial-gradient(#10B981 0.5px, transparent 0.5px), radial-gradient(#10B981 0.5px, #ECFDF5 0.5px);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
     opacity: 0.5;
+    animation: patternDrift 12s linear infinite;
+}
+
+@keyframes patternDrift {
+    0% {
+        background-position: 0 0, 10px 10px;
+    }
+    100% {
+        background-position: 20px 20px, 30px 30px;
+    }
+}
+
+/* Soft glowing aurora behind the hero */
+.hero-aurora {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero-aurora::before,
+.hero-aurora::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.55;
+    will-change: transform;
+}
+
+.hero-aurora::before {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #10B981, transparent 70%);
+    top: -10%;
+    left: -10%;
+    animation: auroraFloat1 10s ease-in-out infinite;
+}
+
+.hero-aurora::after {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #FCD34D, transparent 70%);
+    bottom: -20%;
+    right: -10%;
+    animation: auroraFloat2 12s ease-in-out infinite;
+}
+
+@keyframes auroraFloat1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(150px, 100px) scale(1.2); }
+}
+
+@keyframes auroraFloat2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-130px, -80px) scale(1.25); }
+}
+
+/* Wave divider gentle animation */
+.wave-divider svg {
+    animation: waveSlide 6s ease-in-out infinite;
+}
+
+@keyframes waveSlide {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-3%); }
 }
 
 .card-hover:hover {
@@ -86,3 +153,203 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+
+
+/* Gallery Pop-Out Cards */
+#gallery-grid > div {
+    overflow: visible;
+}
+
+#gallery-grid {
+    overflow: visible;
+    padding-top: 6rem;
+}
+
+#gallery {
+    overflow: visible;
+}
+
+
+/* Hero Pop-Out Effect */
+.hero-pattern + div .lg\:w-1\/2 {
+    overflow: visible;
+}
+
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero-pattern,
+    .hero-aurora::before,
+    .hero-aurora::after,
+    .wave-divider svg,
+    .animate-float,
+    .animate-sway,
+    .feather {
+        animation: none !important;
+    }
+}
+
+
+/* ===== Section Background Animations ===== */
+
+/* Container for floating decorations within a section */
+.section-decor {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Paper bird SVG - tiny stylized bird silhouette */
+.paper-bird {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    opacity: 0.18;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310B981'%3E%3Cpath d='M12 2L8 8l-6 2 6 2 1 7 3-5 3 5 1-7 6-2-6-2z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    will-change: transform;
+}
+
+.paper-bird.yellow {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F59E0B'%3E%3Cpath d='M12 2L8 8l-6 2 6 2 1 7 3-5 3 5 1-7 6-2-6-2z'/%3E%3C/svg%3E");
+}
+
+.paper-bird.pink {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23EC4899'%3E%3Cpath d='M12 2L8 8l-6 2 6 2 1 7 3-5 3 5 1-7 6-2-6-2z'/%3E%3C/svg%3E");
+}
+
+/* Slow horizontal drift across the section */
+@keyframes flyAcross {
+    0% {
+        transform: translateX(-10vw) translateY(0) rotate(-5deg);
+    }
+    50% {
+        transform: translateX(50vw) translateY(-20px) rotate(3deg);
+    }
+    100% {
+        transform: translateX(110vw) translateY(0) rotate(-5deg);
+    }
+}
+
+@keyframes flyAcrossReverse {
+    0% {
+        transform: translateX(110vw) translateY(0) rotate(5deg);
+    }
+    50% {
+        transform: translateX(50vw) translateY(20px) rotate(-3deg);
+    }
+    100% {
+        transform: translateX(-10vw) translateY(0) rotate(5deg);
+    }
+}
+
+.fly-1 {
+    top: 12%;
+    left: 0;
+    animation: flyAcross 28s linear infinite;
+}
+
+.fly-2 {
+    top: 35%;
+    left: 0;
+    animation: flyAcrossReverse 36s linear infinite;
+    animation-delay: -12s;
+}
+
+.fly-3 {
+    top: 65%;
+    left: 0;
+    animation: flyAcross 32s linear infinite;
+    animation-delay: -8s;
+}
+
+.fly-4 {
+    top: 80%;
+    left: 0;
+    animation: flyAcrossReverse 40s linear infinite;
+    animation-delay: -20s;
+}
+
+.fly-5 {
+    top: 22%;
+    left: 0;
+    animation: flyAcrossReverse 34s linear infinite;
+    animation-delay: -16s;
+}
+
+.fly-6 {
+    top: 50%;
+    left: 0;
+    animation: flyAcross 38s linear infinite;
+    animation-delay: -24s;
+}
+
+/* Slow rotating decorative blob */
+.decor-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.18;
+    will-change: transform;
+}
+
+@keyframes blobFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40px, -30px) scale(1.1); }
+}
+
+.blob-emerald {
+    width: 300px;
+    height: 300px;
+    background: #10B981;
+    animation: blobFloat 15s ease-in-out infinite;
+}
+
+.blob-yellow {
+    width: 350px;
+    height: 350px;
+    background: #FCD34D;
+    animation: blobFloat 18s ease-in-out infinite;
+    animation-delay: -5s;
+}
+
+/* Reduced motion - disable section animations */
+@media (prefers-reduced-motion: reduce) {
+    .paper-bird,
+    .decor-blob {
+        animation: none !important;
+    }
+}
+
+
+/* ===== Smooth section transitions =====
+   Each section gets a subtle gradient at top/bottom that blends with adjacent sections */
+
+/* Hero ends fading to white, About continues from white */
+#about {
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 88%, #f9fafb 100%);
+}
+
+/* Services has gray-50 body bg — fade from About white into Gallery yellow-50 */
+#services {
+    background: linear-gradient(to bottom, #f9fafb 0%, #f9fafb 50%, #FEFCE8 100%);
+}
+
+/* Gallery yellow-50 — fade from services into reviews white */
+#gallery {
+    background: linear-gradient(to bottom, #FEFCE8 0%, #FEFCE8 80%, #ffffff 100%);
+}
+
+/* Reviews white — softly transitions into a warm cream contact section */
+#reviews {
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 80%, #FEFCE8 100%);
+}
+
+/* Contact section - warm cream tone matching the rest of the site */
+#contact {
+    background: linear-gradient(to bottom, #FEFCE8 0%, #FEF3C7 100%);
+    color: #064e3b;
+}

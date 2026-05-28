@@ -7,37 +7,44 @@ function populateHero() {
     const hero = CONFIG.hero;
     const contact = CONFIG.contact;
     
-    // Hero badge
     const heroBadge = document.getElementById('hero-badge');
     if (heroBadge && hero.badge) {
         heroBadge.textContent = hero.badge;
     }
     
-    // Hero title
     const heroTitle = document.getElementById('hero-title');
     if (heroTitle && hero.title) {
         heroTitle.innerHTML = hero.title;
     }
     
-    // Hero description
     const heroDesc = document.getElementById('hero-description');
     if (heroDesc && hero.description) {
         heroDesc.textContent = hero.description;
     }
     
-    // Hero image
     const heroImage = document.getElementById('hero-image');
     if (heroImage && hero.heroImage) {
         heroImage.src = hero.heroImage;
     }
     
-    // WhatsApp link
-    const whatsappLink = document.getElementById('whatsapp-link');
+    // Build WhatsApp URL once and apply everywhere
+    const whatsappUrl = contact.whatsapp
+        ? `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(contact.whatsappMessage || '')}`
+        : '#';
+    
+    // Apply WhatsApp URL to all known WhatsApp links across the site
+    [
+        'whatsapp-link',
+        'nav-whatsapp-link',
+        'nav-mobile-whatsapp-link',
+        'footer-whatsapp-link',
+        'footer-phone-link'
+    ].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.href = whatsappUrl;
+    });
+    
     const whatsappText = document.getElementById('whatsapp-text');
-    if (whatsappLink && contact.whatsapp) {
-        const whatsappUrl = `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(contact.whatsappMessage)}`;
-        whatsappLink.href = whatsappUrl;
-    }
     if (whatsappText && contact.phone) {
         whatsappText.textContent = `WhatsApp ${contact.phone}`;
     }
@@ -50,19 +57,16 @@ function populateAbout() {
     const about = CONFIG.about;
     const stats = CONFIG.stats;
     
-    // About badge
     const aboutBadge = document.getElementById('about-badge');
     if (aboutBadge && about.badge) {
         aboutBadge.textContent = about.badge;
     }
     
-    // About title
     const aboutTitle = document.getElementById('about-title');
     if (aboutTitle && about.title) {
         aboutTitle.textContent = about.title;
     }
     
-    // About descriptions
     const aboutDesc1 = document.getElementById('about-desc1');
     if (aboutDesc1 && about.description1) {
         aboutDesc1.innerHTML = about.description1;
@@ -75,8 +79,8 @@ function populateAbout() {
     
     // Stats
     const statBirds = document.getElementById('stat-birds');
-    if (statBirds && stats.birdsCaredFor) {
-        statBirds.textContent = stats.birdsCaredFor;
+    if (statBirds && stats.birdsSold) {
+        statBirds.textContent = stats.birdsSold;
     }
     
     const statOwners = document.getElementById('stat-owners');
@@ -90,8 +94,8 @@ function populateAbout() {
     }
     
     const statLocation = document.getElementById('stat-location');
-    if (statLocation && stats.location) {
-        statLocation.textContent = stats.location;
+    if (statLocation && stats.specialty) {
+        statLocation.textContent = stats.specialty;
     }
     
     // Why Choose Us
@@ -117,19 +121,16 @@ function populateServices() {
     
     const services = CONFIG.services;
     
-    // Services title
     const servicesTitle = document.getElementById('services-title');
     if (servicesTitle && services.title) {
         servicesTitle.textContent = services.title;
     }
     
-    // Services description
     const servicesDesc = document.getElementById('services-description');
     if (servicesDesc && services.description) {
         servicesDesc.textContent = services.description;
     }
     
-    // Services grid
     const servicesGrid = document.getElementById('services-grid');
     if (servicesGrid && services.items) {
         servicesGrid.innerHTML = services.items.map(service => {
@@ -158,63 +159,84 @@ function populateGallery() {
     
     const gallery = CONFIG.gallery;
     
-    // Gallery title
     const galleryTitle = document.getElementById('gallery-title');
     if (galleryTitle && gallery.title) {
         galleryTitle.textContent = gallery.title;
     }
     
-    // Gallery grid
     const galleryGrid = document.getElementById('gallery-grid');
     if (galleryGrid && gallery.birds) {
-        galleryGrid.innerHTML = gallery.birds.map(bird => `
-            <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-md">
-                <img src="${bird.image}" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-500" alt="${bird.name}">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
-                    <span class="text-white font-bold text-lg">${bird.name}</span>
+        const colors = [
+            'bg-emerald-100',
+            'bg-pink-100',
+            'bg-orange-100',
+            'bg-blue-100',
+            'bg-purple-100'
+        ];
+
+        galleryGrid.innerHTML = gallery.birds.map((bird, index) => {
+            const color = colors[index % colors.length];
+            const scale = bird.scale || 115;
+            const align = bird.align || 'center';
+            
+            const positionClass = align === 'left'
+                ? 'left-0'
+                : align === 'right'
+                ? 'right-0'
+                : 'left-1/2 -translate-x-1/2';
+
+            return `
+                <div class="group flex flex-col items-center">
+                    <!-- Colored card with bird popping out the top -->
+                    <div class="relative w-full h-36 md:h-40 ${color} rounded-2xl shadow-md overflow-visible flex items-end justify-center transition-all duration-500 group-hover:shadow-xl">
+                        <img src="${bird.image}" 
+                             class="absolute bottom-0 ${positionClass} h-auto max-w-none drop-shadow-xl transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-2 origin-bottom" 
+                             style="width: ${scale}%;"
+                             alt="${bird.name}">
+                    </div>
+                    <span class="mt-4 font-bold text-gray-800 text-center text-sm md:text-base">${bird.name}</span>
                 </div>
-            </div>
-        `).join('') + `
-            <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-md bg-emerald-100 flex items-center justify-center">
-                <div class="text-center p-4">
-                    <i class="ph-fill ph-plus-circle text-4xl text-emerald-500 mb-2"></i>
-                    <p class="font-bold text-emerald-800">And Many More!</p>
-                </div>
-            </div>
-        `;
+            `;
+        }).join('');
     }
 }
 
-// Populate liability section
-function populateLiability() {
-    if (typeof CONFIG === 'undefined') return;
+// Populate reviews section
+function populateReviews() {
+    if (typeof CONFIG === 'undefined' || !CONFIG.reviews) return;
     
-    const liability = CONFIG.liability;
+    const reviews = CONFIG.reviews;
     
-    // Liability title
-    const liabilityTitle = document.getElementById('liability-title');
-    if (liabilityTitle && liability.title) {
-        liabilityTitle.textContent = liability.title;
+    const reviewsTitle = document.getElementById('reviews-title');
+    if (reviewsTitle && reviews.title) {
+        reviewsTitle.textContent = reviews.title;
     }
     
-    // Liability description
-    const liabilityDesc = document.getElementById('liability-description');
-    if (liabilityDesc && liability.description) {
-        liabilityDesc.textContent = liability.description;
+    const reviewsDesc = document.getElementById('reviews-description');
+    if (reviewsDesc && reviews.description) {
+        reviewsDesc.textContent = reviews.description;
     }
     
-    // Liability terms
-    const liabilityTerms = document.getElementById('liability-terms');
-    if (liabilityTerms && liability.terms) {
-        liabilityTerms.innerHTML = liability.terms.map(term => `
-            <li><strong>${term.title}</strong> ${term.text}</li>
+    const reviewsGrid = document.getElementById('reviews-grid');
+    if (reviewsGrid && reviews.highlights) {
+        reviewsGrid.innerHTML = reviews.highlights.map(highlight => `
+            <div class="bg-gradient-to-br from-yellow-50 to-emerald-50 p-6 rounded-2xl border border-emerald-100 shadow-sm">
+                <div class="flex items-center gap-1 mb-3">
+                    <i class="ph-fill ph-star text-yellow-500"></i>
+                    <i class="ph-fill ph-star text-yellow-500"></i>
+                    <i class="ph-fill ph-star text-yellow-500"></i>
+                    <i class="ph-fill ph-star text-yellow-500"></i>
+                    <i class="ph-fill ph-star text-yellow-500"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-2">${highlight.title}</h4>
+                <p class="text-gray-600 text-sm">${highlight.text}</p>
+            </div>
         `).join('');
     }
     
-    // Liability disclaimer
-    const liabilityDisclaimer = document.getElementById('liability-disclaimer');
-    if (liabilityDisclaimer && liability.disclaimer) {
-        liabilityDisclaimer.textContent = liability.disclaimer;
+    const googleLink = document.getElementById('google-reviews-link');
+    if (googleLink && reviews.googleProfileUrl) {
+        googleLink.href = reviews.googleProfileUrl;
     }
 }
 
@@ -225,38 +247,26 @@ function populateFooter() {
     const footer = CONFIG.footer;
     const contact = CONFIG.contact;
     
-    // Footer title
     const footerTitle = document.getElementById('footer-title');
     if (footerTitle && footer.title) {
         footerTitle.textContent = footer.title;
     }
     
-    // Footer subtitle
     const footerSubtitle = document.getElementById('footer-subtitle');
     if (footerSubtitle && footer.subtitle) {
         footerSubtitle.textContent = footer.subtitle;
     }
     
-    // Footer phone
     const footerPhone = document.getElementById('footer-phone');
     if (footerPhone && contact.phone) {
         footerPhone.textContent = contact.phone;
     }
     
-    // Footer WhatsApp link
-    const footerWhatsappLink = document.getElementById('footer-whatsapp-link');
-    if (footerWhatsappLink && contact.whatsapp) {
-        const whatsappUrl = `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(contact.whatsappMessage)}`;
-        footerWhatsappLink.href = whatsappUrl;
-    }
-    
-    // Footer copyright
     const footerCopyright = document.getElementById('footer-copyright');
     if (footerCopyright && footer.copyright) {
         footerCopyright.textContent = footer.copyright;
     }
     
-    // Footer location
     const footerLocation = document.getElementById('footer-location');
     if (footerLocation && footer.locationText) {
         footerLocation.textContent = footer.locationText;
@@ -272,7 +282,6 @@ function populateBusinessName() {
         businessName.textContent = CONFIG.business.name;
     }
     
-    // Update page title
     if (CONFIG.business && CONFIG.business.name && CONFIG.business.tagline) {
         document.title = `${CONFIG.business.name} | ${CONFIG.business.tagline}`;
     }
@@ -285,7 +294,6 @@ document.addEventListener('DOMContentLoaded', () => {
     populateAbout();
     populateServices();
     populateGallery();
-    populateLiability();
+    populateReviews();
     populateFooter();
 });
-
