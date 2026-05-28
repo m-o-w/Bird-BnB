@@ -328,19 +328,22 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Smooth section transitions =====
    Each section gets a subtle gradient at top/bottom that blends with adjacent sections */
 
-/* Hero ends fading to white, About continues from white */
+/* Section gradient flow:
+   Hero (emerald-50, ends white via wave) → Gallery (yellow-50) → About (white) → Services (gray) → Reviews (white) → Contact (cream) */
+
+/* Gallery comes right after hero, blending hero's white wave bottom into yellow-50 then into white for About */
+#gallery {
+    background: linear-gradient(to bottom, #ffffff 0%, #FEFCE8 20%, #FEFCE8 80%, #ffffff 100%);
+}
+
+/* About picks up from gallery's white and fades into gray for services */
 #about {
     background: linear-gradient(to bottom, #ffffff 0%, #ffffff 88%, #f9fafb 100%);
 }
 
-/* Services has gray-50 body bg — fade from About white into Gallery yellow-50 */
+/* Services fades from About white-gray into Reviews white */
 #services {
-    background: linear-gradient(to bottom, #f9fafb 0%, #f9fafb 50%, #FEFCE8 100%);
-}
-
-/* Gallery yellow-50 — fade from services into reviews white */
-#gallery {
-    background: linear-gradient(to bottom, #FEFCE8 0%, #FEFCE8 80%, #ffffff 100%);
+    background: linear-gradient(to bottom, #f9fafb 0%, #f9fafb 50%, #ffffff 100%);
 }
 
 /* Reviews white — softly transitions into a warm cream contact section */
