@@ -137,16 +137,18 @@ function populateServices() {
             const iconBgClass = {
                 'orange': 'bg-orange-100 text-orange-600',
                 'green': 'bg-green-100 text-green-600',
-                'blue': 'bg-blue-100 text-blue-600'
+                'blue': 'bg-blue-100 text-blue-600',
+                'pink': 'bg-pink-100 text-pink-600',
+                'purple': 'bg-purple-100 text-purple-600'
             }[service.iconBg] || 'bg-gray-100 text-gray-600';
             
             return `
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover transition duration-300">
-                    <div class="w-14 h-14 ${iconBgClass} rounded-full flex items-center justify-center mb-6">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 card-hover transition duration-300">
+                    <div class="w-14 h-14 ${iconBgClass} rounded-full flex items-center justify-center mb-5">
                         <i class="ph-fill ${service.icon} text-3xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">${service.title}</h3>
-                    <p class="text-gray-600">${service.description}</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">${service.description}</p>
                 </div>
             `;
         }).join('');
@@ -206,6 +208,7 @@ function populateReviews() {
     if (typeof CONFIG === 'undefined' || !CONFIG.reviews) return;
     
     const reviews = CONFIG.reviews;
+    const google = CONFIG.google || {};
     
     const reviewsTitle = document.getElementById('reviews-title');
     if (reviewsTitle && reviews.title) {
@@ -217,6 +220,79 @@ function populateReviews() {
         reviewsDesc.textContent = reviews.description;
     }
     
+    // Google snippet
+    const googleSnippetLink = document.getElementById('google-snippet-link');
+    if (googleSnippetLink && google.profileUrl) {
+        googleSnippetLink.href = google.profileUrl;
+    }
+    
+    const googleBusinessName = document.getElementById('google-business-name');
+    if (googleBusinessName && google.businessName) {
+        googleBusinessName.textContent = google.businessName;
+    }
+    
+    const googleRating = document.getElementById('google-rating');
+    if (googleRating && google.rating) {
+        googleRating.textContent = google.rating;
+    }
+    
+    const googleReviewCount = document.getElementById('google-review-count');
+    if (googleReviewCount && google.reviewCount) {
+        googleReviewCount.textContent = `(${google.reviewCount} reviews)`;
+    }
+    
+    // Render stars based on numeric rating (0-5)
+    const googleStars = document.getElementById('google-stars');
+    if (googleStars && google.rating) {
+        const ratingValue = parseFloat(google.rating);
+        let starsHtml = '';
+        for (let i = 1; i <= 5; i++) {
+            if (ratingValue >= i) {
+                starsHtml += '<i class="ph-fill ph-star text-yellow-400"></i>';
+            } else if (ratingValue >= i - 0.5) {
+                starsHtml += '<i class="ph-fill ph-star-half text-yellow-400"></i>';
+            } else {
+                starsHtml += '<i class="ph ph-star text-yellow-400"></i>';
+            }
+        }
+        googleStars.innerHTML = starsHtml;
+    }
+    
+    // Testimonials
+    const testimonialsGrid = document.getElementById('testimonials-grid');
+    if (testimonialsGrid && reviews.testimonials) {
+        testimonialsGrid.innerHTML = reviews.testimonials.map(t => {
+            const starCount = t.rating || 5;
+            let stars = '';
+            for (let i = 0; i < starCount; i++) {
+                stars += '<i class="ph-fill ph-star text-yellow-400"></i>';
+            }
+            const initials = t.name ? t.name.split(' ').map(p => p[0]).join('').slice(0, 2).toUpperCase() : '?';
+            const badgeHtml = t.badge ? `<span class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">${t.badge}</span>` : '';
+            const dateHtml = t.date ? `<span class="text-gray-400 text-xs">${t.date}</span>` : '';
+            return `
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition flex flex-col">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-1">${stars}</div>
+                        ${dateHtml}
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed flex-1 mb-4">&ldquo;${t.text}&rdquo;</p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center font-bold text-sm">${initials}</div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <p class="font-bold text-gray-900 text-sm">${t.name}</p>
+                                ${badgeHtml}
+                            </div>
+                            ${t.bird ? `<p class="text-gray-500 text-xs">Bought a ${t.bird}</p>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+    
+    // Trust highlights
     const reviewsGrid = document.getElementById('reviews-grid');
     if (reviewsGrid && reviews.highlights) {
         reviewsGrid.innerHTML = reviews.highlights.map(highlight => `

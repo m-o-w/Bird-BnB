@@ -25,9 +25,12 @@ const CONFIG = {
 
     // Google Reviews
     google: {
-        profileUrl: "https://maps.app.goo.gl/2cMZRjKjA2bMjXkN8",
-        rating: "5.0",
-        reviewCount: "100+"
+        profileUrl: "https://share.google/9NrlS5d4BFwBUpZQC",
+        mapsEmbedQuery: "Love+for+Cockatiels+Bird+Pet+Shop",
+        rating: "4.9",
+        ratingMax: "5",
+        reviewCount: "55",
+        businessName: "Love for Cockatiels (Bird Pet Shop)"
     },
 
     // Hero Section
@@ -47,10 +50,11 @@ const CONFIG = {
         whyChooseUs: {
             title: "Why Choose Love For Cockatiels?",
             features: [
-                "Hand-raised & fully tamed pet birds",
-                "Specialists in hand-fed cockatiels",
-                "Human-friendly, social & talking-ready parrots",
-                "Healthy diet & veterinary care from day one",
+                "Hand-raised, fully tamed pet birds",
+                "Premium hand-feeding formula & nutrient-rich diet",
+                "Clean, temperature-controlled aviaries",
+                "Talking-ready, human-friendly parrots",
+                "Health-checked, premium quality birds",
                 "Free care guidance for new bird parents",
                 "Trusted by 500+ happy bird owners"
             ]
@@ -60,25 +64,31 @@ const CONFIG = {
     // Services Section
     services: {
         title: "Why Our Hand-Raised Birds Are Different",
-        description: "Every cockatiel and parrot from Love For Cockatiels is hand-fed and socialised with care. Here's what makes our pet birds stand out.",
+        description: "Every cockatiel and parrot from Love For Cockatiels is raised with premium care — from nutrition to housing to handling. Here's what sets our pet birds apart.",
         items: [
             {
                 icon: "ph-hand-heart",
                 iconBg: "orange",
-                title: "Hand-Raised From Day One",
-                description: "Our cockatiels and parrots are hand-fed and handled daily from a young age. This makes them tame, trusting, and comfortable around humans — perfect companion birds from the moment they arrive home."
+                title: "Hand-Raised & Tamed",
+                description: "Hand-fed and handled daily from a young age, our cockatiels and parrots grow up tame, social, and ready to bond. Many are talking-ready and step up on fingers from day one."
             },
             {
-                icon: "ph-heart",
+                icon: "ph-bowl-food",
                 iconBg: "green",
-                title: "Human-Friendly & Talking-Ready",
-                description: "Every pet bird is socialised extensively. They step up on fingers, enjoy head scratches, and bond quickly with their families. Many of our parrots are eager to talk and mimic — no wild or aggressive birds here."
+                title: "Premium Feeding Formula",
+                description: "Our birds are raised on a premium hand-feeding formula and nutrient-rich diet — chop, pellets, and fresh produce — for strong immunity, vibrant feathers, and healthy growth."
+            },
+            {
+                icon: "ph-thermometer",
+                iconBg: "blue",
+                title: "Clean & Climate-Controlled",
+                description: "Birds are housed in spotlessly clean, temperature- and humidity-controlled aviaries. A stress-free environment means happier, healthier birds ready for their forever home."
             },
             {
                 icon: "ph-first-aid-kit",
-                iconBg: "blue",
-                title: "Healthy & Vet-Checked",
-                description: "All cockatiels and parrots receive proper nutrition, regular health checks, and arrive in excellent condition. We also share care tips and ongoing support with every new bird parent."
+                iconBg: "pink",
+                title: "Premium Quality, Vet-Checked",
+                description: "Every bird is health-checked and arrives in premium condition. We hand-select only the healthiest birds and share care guidance so your companion thrives at home."
             }
         ]
     },
@@ -123,23 +133,47 @@ const CONFIG = {
     // Reviews / Trust Section (replaces Liability)
     reviews: {
         title: "Loved by Bird Parents Everywhere",
-        description: "Don't just take our word for it — our Google reviews speak for themselves. We're proud to have built a community of happy bird owners.",
-        googleProfileUrl: "https://maps.app.goo.gl/2cMZRjKjA2bMjXkN8",
-        highlights: [
+        description: "Real reviews from real customers. See what verified bird parents say about their hand-raised cockatiels and parrots from Love For Cockatiels.",
+        googleProfileUrl: "https://share.google/9NrlS5d4BFwBUpZQC",
+        testimonials: [
             {
-                title: "5-Star Rated",
-                text: "Consistently rated 5 stars on Google by verified buyers who love their new feathered companions."
+                name: "Vivek Chandra",
+                rating: 5,
+                badge: "Local Guide",
+                date: "a year ago",
+                text: "I am so happy I found these guys. Was nervous because bird shops mostly treat them badly in small cages and poor conditions. But these guys take care of their birds like their family and it shows. Its been my first day with my Cockatiel (Zazu) and we are already in love with each other. They are also super helpful with how to make the bird comfortable in the new setting. Thanks a lot Aman for just the bird I wanted!",
+                bird: "Cockatiel"
             },
             {
-                title: "Trusted Seller",
-                text: "Hundreds of happy customers across India trust Love For Cockatiels for healthy, tame, hand-raised birds."
+                name: "Tamanna Bordoloi",
+                rating: 5,
+                date: "2 years ago",
+                text: "Had an amazing experience. Got my pet bird from 'Love for Cockatiels'. It is the best place to start for anyone looking for a Cockatiel. The little one is so confident and active since the first day. Also the owner is very knowledgeable and guides you throughout the process. Lovely experience!",
+                bird: "Cockatiel"
             },
             {
-                title: "After-Sale Support",
-                text: "We don't just sell birds — we guide you through diet, care, and training so your bird thrives in its new home."
+                name: "charu",
+                rating: 5,
+                date: "5 years ago",
+                text: "The right person to contact if you wanna buy a cockatiel. He is very knowledgeable and always at a call away. My first bird pet. It's amazing, adjusted quite well and early with us. Looking forward to another one. Thank you so much for a lovely new family member — our booboo 😃",
+                bird: "Cockatiel"
             }
         ],
-        cta: "See Our Google Reviews"
+        highlights: [
+            {
+                title: "4.9-Star Google Rating",
+                text: "Verified reviews from real customers — consistently rated almost-perfect across the board."
+            },
+            {
+                title: "Trusted Across India",
+                text: "Hundreds of happy bird parents across India trust us for healthy, premium quality, hand-raised birds."
+            },
+            {
+                title: "Lifetime Care Support",
+                text: "We don't just sell birds — we guide you through diet, training, and care so your bird thrives."
+            }
+        ],
+        cta: "See All Reviews on Google"
     },
 
     // Footer/CTA Section
