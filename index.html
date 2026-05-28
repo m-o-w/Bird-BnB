@@ -132,12 +132,16 @@
                     </p>
 
                     <!-- Hero image on mobile only (between text and CTAs) -->
-                    <div class="lg:hidden relative flex justify-center mb-8">
-                        <div class="relative w-[70%] h-[24px] rounded-2xl border-3 border-white shadow-lg bg-gradient-to-br from-emerald-50 to-emerald-100 overflow-visible">
+                    <div class="lg:hidden flex justify-center mb-8">
+                        <div class="relative w-[80%] max-w-xs h-[260px] sm:h-[300px] flex items-end justify-center">
+                            <!-- Frame platform at the bottom -->
+                            <div class="absolute bottom-0 left-0 right-0 h-[24px] rounded-2xl border-2 border-white shadow-lg bg-gradient-to-br from-emerald-50 to-emerald-100 z-0"></div>
+                            <!-- Bird image -->
                             <img src="images/hero-image.png" 
                                  alt="Hand-raised tamed cockatiel sitting on a happy child's shoulder" 
-                                 class="absolute bottom-0 right-0 h-[220px] sm:h-[280px] w-auto max-w-none object-contain object-bottom drop-shadow-xl pointer-events-none">
-                            <div class="absolute -top-4 -right-4 bg-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center">
+                                 class="relative h-full w-auto max-w-none object-contain object-bottom drop-shadow-xl pointer-events-none z-10">
+                            <!-- Heart badge -->
+                            <div class="absolute -top-2 right-2 bg-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center z-20">
                                 <span class="text-xl">❤️</span>
                             </div>
                         </div>
