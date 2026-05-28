@@ -32,26 +32,26 @@ const CONFIG = {
 
     // Hero Section
     hero: {
-        badge: "🐦 Hand-Raised & Tamed Pet Birds",
-        title: "Bring Home a <span class=\"text-emerald-500\">Feathered</span> Friend",
-        description: "Looking for a hand-raised, tamed, human-friendly bird? We specialize in cockatiels and other popular parrots — raised with love, ready to bond with you.",
+        badge: "🐦 Hand-Raised Cockatiels & Tamed Pet Parrots",
+        title: "Bring Home a <span class=\"text-emerald-500\">Hand-Raised</span> Bird",
+        description: "Looking to buy a hand-raised, tamed, talking parrot or cockatiel? We specialise in hand-fed cockatiels and popular pet parrots — raised with love, ready to bond as a true companion.",
         heroImage: "images/hero-image.png"
     },
 
     // About Section
     about: {
         badge: "About Us",
-        title: "Specialists in Hand-Raised Cockatiels & Parrots",
-        description1: "<strong>Love For Cockatiels</strong> is built on a passion for raising happy, healthy, human-friendly birds. We hand-raise every bird from a young age, ensuring they are tame, social, and ready to become a loving companion in your home.",
-        description2: "While cockatiels are our specialty, we also raise and offer other well-known parrots including Love Birds, Conures, African Greys, and Macaws. Every bird from us is nurtured with proper nutrition, socialization, and veterinary care.",
+        title: "India's Trusted Hand-Raised Cockatiel & Parrot Breeder",
+        description1: "<strong>Love For Cockatiels</strong> is built on a passion for raising happy, healthy, hand-tamed pet birds. Every cockatiel and parrot is hand-fed and socialised from a young age, so they grow up tame, friendly, and ready to become a loving companion in your home.",
+        description2: "While hand-raised cockatiels are our specialty, we also offer well-known pet parrots including lovebirds, conures, African greys, and macaws. Each bird is nurtured with proper nutrition, daily handling, and veterinary care — so you take home a healthy, human-friendly companion.",
         whyChooseUs: {
-            title: "Why Choose Us?",
+            title: "Why Choose Love For Cockatiels?",
             features: [
-                "Hand-raised & fully tamed birds",
-                "Specialization in cockatiels",
-                "Human-friendly & social birds",
-                "Proper nutrition & veterinary care from day one",
-                "Guidance on bird care after purchase",
+                "Hand-raised & fully tamed pet birds",
+                "Specialists in hand-fed cockatiels",
+                "Human-friendly, social & talking-ready parrots",
+                "Healthy diet & veterinary care from day one",
+                "Free care guidance for new bird parents",
                 "Trusted by 500+ happy bird owners"
             ]
         }
@@ -59,42 +59,42 @@ const CONFIG = {
 
     // Services Section
     services: {
-        title: "What Makes Our Birds Special",
-        description: "Every bird from Love For Cockatiels is hand-raised with dedication. Here's what sets us apart from the rest.",
+        title: "Why Our Hand-Raised Birds Are Different",
+        description: "Every cockatiel and parrot from Love For Cockatiels is hand-fed and socialised with care. Here's what makes our pet birds stand out.",
         items: [
             {
                 icon: "ph-hand-heart",
                 iconBg: "orange",
                 title: "Hand-Raised From Day One",
-                description: "Our birds are hand-fed and handled daily from a young age. This ensures they grow up tame, trusting, and comfortable around humans — perfect companions from the start."
+                description: "Our cockatiels and parrots are hand-fed and handled daily from a young age. This makes them tame, trusting, and comfortable around humans — perfect companion birds from the moment they arrive home."
             },
             {
                 icon: "ph-heart",
                 iconBg: "green",
-                title: "Human-Friendly & Social",
-                description: "Every bird is socialized extensively. They step up on fingers, enjoy head scratches, and bond quickly with their new families. No wild or aggressive birds here."
+                title: "Human-Friendly & Talking-Ready",
+                description: "Every pet bird is socialised extensively. They step up on fingers, enjoy head scratches, and bond quickly with their families. Many of our parrots are eager to talk and mimic — no wild or aggressive birds here."
             },
             {
                 icon: "ph-first-aid-kit",
                 iconBg: "blue",
-                title: "Health Guaranteed",
-                description: "All our birds receive proper nutrition, regular health checks, and are in excellent condition before going to their new homes. We provide care guidance to every new owner."
+                title: "Healthy & Vet-Checked",
+                description: "All cockatiels and parrots receive proper nutrition, regular health checks, and arrive in excellent condition. We also share care tips and ongoing support with every new bird parent."
             }
         ]
     },
 
     // Gallery Section
     gallery: {
-        title: "Our Birds",
+        title: "Hand-Raised Pet Birds We Offer",
         birds: [
             {
-                name: "Cockatiels",
+                name: "Hand-Raised Cockatiels",
                 image: "images/cockatiel-solo.png",
                 scale: 152,
                 align: "center"
             },
             {
-                name: "Love Birds",
+                name: "Lovebirds",
                 image: "images/love-birds-pair.png",
                 scale: 92,
                 align: "center"
@@ -106,7 +106,7 @@ const CONFIG = {
                 align: "center"
             },
             {
-                name: "African Greys",
+                name: "African Grey Parrots",
                 image: "images/african-grey-solo.png",
                 scale: 127,
                 align: "center"
