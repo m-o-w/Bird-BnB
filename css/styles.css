@@ -72,23 +72,13 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
 }
 
-/* Hero Pattern Background - animated drift */
+/* Hero Pattern Background - static dots (animation removed for smooth scrolling) */
 .hero-pattern {
     background-color: #ECFDF5;
     background-image: radial-gradient(#10B981 0.5px, transparent 0.5px), radial-gradient(#10B981 0.5px, #ECFDF5 0.5px);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
     opacity: 0.5;
-    animation: patternDrift 12s linear infinite;
-}
-
-@keyframes patternDrift {
-    0% {
-        background-position: 0 0, 10px 10px;
-    }
-    100% {
-        background-position: 20px 20px, 30px 30px;
-    }
 }
 
 /* Soft glowing aurora behind the hero */
@@ -355,4 +345,28 @@ h1, h2, h3, h4, h5, h6 {
 #contact {
     background: linear-gradient(to bottom, #FEFCE8 0%, #FEF3C7 100%);
     color: #064e3b;
+}
+
+
+/* ===== Mobile performance optimizations ===== */
+@media (max-width: 768px) {
+    /* Heavy GPU effects disabled on mobile to keep scrolling smooth */
+    .hero-aurora::before,
+    .hero-aurora::after {
+        animation: none !important;
+        opacity: 0.25;
+    }
+
+    .wave-divider svg {
+        animation: none !important;
+    }
+
+    .decor-blob {
+        animation: none !important;
+    }
+
+    /* Keep paper birds for charm but slow them slightly */
+    .paper-bird {
+        animation-duration: 50s !important;
+    }
 }
