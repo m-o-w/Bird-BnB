@@ -35,16 +35,16 @@ const CONFIG = {
 
     // Hero Section
     hero: {
-        badge: "🐦 Hand-Raised Cockatiels & Tamed Pet Parrots",
+        badge: "🐦 Hand-Raised & Human-Friendly Pet Birds",
         title: "Bring Home a <span class=\"text-emerald-500\">Hand-Raised</span> Bird",
-        description: "Looking to buy a hand-raised, tamed, talking parrot or cockatiel? We specialise in hand-fed cockatiels and popular pet parrots — raised with love, ready to bond as a true companion.",
+        description: "Looking to buy a hand-raised, human-friendly parrot or cockatiel? We specialise in hand-fed cockatiels and popular pet parrots — raised with love, ready to bond as a true companion.",
         heroImage: "images/hero-image.png"
     },
 
     // About Section
     about: {
         badge: "About Us",
-        title: "India's Trusted Hand-Raised Cockatiel & Parrot Breeder",
+        title: "Delhi NCR's Trusted Hand-Raised Cockatiel & Parrot Breeder",
         description1: "<strong>Love For Cockatiels</strong> is built on a passion for raising happy, healthy, hand-tamed pet birds. Every cockatiel and parrot is hand-fed and socialised from a young age, so they grow up tame, friendly, and ready to become a loving companion in your home.",
         description2: "While hand-raised cockatiels are our specialty, we also offer well-known pet parrots including lovebirds, conures, African greys, and macaws. Each bird is nurtured with proper nutrition, daily handling, and veterinary care — so you take home a healthy, human-friendly companion.",
         whyChooseUs: {
