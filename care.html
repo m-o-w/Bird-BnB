@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Care Hub | Love For Cockatiels — Complete Guide for New Bird Parents</title>
+    <meta name="description" content="Complete bird care guide for new cockatiel and parrot owners in India. Learn about diet, bonding, health signs, cage setup, and more from Delhi NCR's trusted bird experts.">
+    <meta name="keywords" content="cockatiel care guide India, pet bird diet, how to bond with cockatiel, bird health signs, cockatiel cage setup, new bird parent guide, parrot care tips India">
+    <link rel="canonical" href="https://loveforcockatiels.com/care.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="theme-color" content="#10B981">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .tab-btn.active {
+            background-color: #10B981;
+            color: white;
+            border-color: #10B981;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body class="bg-gray-50 relative">
+
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 sm:h-20 items-center">
+                <a href="/" class="flex items-center gap-2">
+                    <i class="ph-fill ph-bird text-3xl text-emerald-500"></i>
+                    <span class="text-xl sm:text-2xl font-bold text-gray-800">Love For Cockatiels</span>
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="text-gray-600 hover:text-emerald-600 font-medium transition">Home</a>
+                    <a href="/care.html" class="text-emerald-600 font-bold transition">Care Guide</a>
+                    <a href="/#gallery" class="text-gray-600 hover:text-emerald-600 font-medium transition">Our Birds</a>
+                    <a href="/#reviews" class="text-gray-600 hover:text-emerald-600 font-medium transition">Reviews</a>
+                </div>
+                <div class="md:hidden">
+                    <a href="/" class="text-gray-600 hover:text-emerald-600 font-medium text-sm">← Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-emerald-50 py-12 sm:py-16 relative overflow-hidden">
+        <div class="absolute inset-0 hero-pattern z-0"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">🐦 Bird Care Hub</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Everything you need to know as a new bird parent. Curated by Love For Cockatiels — Delhi NCR's trusted hand-raised bird experts.</p>
+        </div>
+    </section>
+
+    <!-- Tab Navigation -->
+    <section class="py-8 sm:py-12">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Tab buttons - scrollable on mobile -->
+            <div class="flex overflow-x-auto gap-2 sm:gap-3 pb-4 mb-8 sm:mb-10 scrollbar-hide" id="tab-nav">
+                <button class="tab-btn active flex-shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border-2 border-emerald-200 text-sm sm:text-base font-bold text-emerald-700 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition" data-tab="bringing-home">
+                    <i class="ph ph-house-line mr-1"></i> Bringing Home
+                </button>
+                <button class="tab-btn flex-shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border-2 border-emerald-200 text-sm sm:text-base font-bold text-emerald-700 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition" data-tab="bonding">
+                    <i class="ph ph-heart mr-1"></i> Bonding
+                </button>
+                <button class="tab-btn flex-shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border-2 border-emerald-200 text-sm sm:text-base font-bold text-emerald-700 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition" data-tab="diet">
+                    <i class="ph ph-bowl-food mr-1"></i> Diet & Nutrition
+                </button>
+                <button class="tab-btn flex-shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border-2 border-emerald-200 text-sm sm:text-base font-bold text-emerald-700 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition" data-tab="health">
+                    <i class="ph ph-first-aid-kit mr-1"></i> Health & First Aid
+                </button>
+                <button class="tab-btn flex-shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border-2 border-emerald-200 text-sm sm:text-base font-bold text-emerald-700 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition" data-tab="environment">
+                    <i class="ph ph-thermometer mr-1"></i> Environment & Safety
+                </button>
+                <button class="tab-btn flex-shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border-2 border-emerald-200 text-sm sm:text-base font-bold text-emerald-700 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition" data-tab="grooming">
+                    <i class="ph ph-drop mr-1"></i> Grooming & Hygiene
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="bg-white rounded-2xl shadow-md border border-gray-100 p-6 sm:p-8 lg:p-10">
+
+                <!-- TAB 1: Bringing Home -->
+                <div class="tab-content active" id="bringing-home">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Bringing Your Bird Home</h2>
+                    <p class="text-gray-600 mb-6">The first 48 hours are critical for your new bird's adjustment. Here's how to make the transition smooth and stress-free.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Before You Arrive Home</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>Set up the cage in advance</strong> — place it in a quiet corner away from direct sunlight, kitchen fumes, and loud TVs. Avoid placing near windows with direct afternoon sun (Indian summers can overheat a cage quickly).</li>
+                        <li><strong>Stock essentials</strong> — fresh water in a clean bowl, seed mix or pellets, millet spray (great comfort food), and cuttlebone for calcium.</li>
+                        <li><strong>Cover three sides</strong> of the cage with a light cloth to create a sense of security. Leave the front open so the bird can observe.</li>
+                        <li><strong>Remove other pets</strong> from the room for the first few days.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">The First 24–48 Hours</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>Don't handle the bird</strong> — let it settle. Resist the urge to pet or pick it up immediately.</li>
+                        <li><strong>Speak softly</strong> near the cage. Let the bird get used to your voice and presence.</li>
+                        <li><strong>Expect stress signs</strong> — the bird may sit quietly, refuse food, or have loose droppings for 24 hours. This is normal and usually resolves on its own.</li>
+                        <li><strong>Maintain a consistent routine</strong> — feed at the same times, keep lights on a 12-hour cycle (important in India where daylight varies by season).</li>
+                        <li><strong>Keep noise levels low</strong> — no loud music, pressure cooker whistles near the bird, or sudden door slams.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Days 3–7: Settling In</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li>Start sitting near the cage for 15–20 minutes at a time, reading aloud or talking softly.</li>
+                        <li>Offer millet spray through the cage bars — this builds positive association with your hand.</li>
+                        <li>Observe eating and drinking patterns. A healthy bird should eat within 6–8 hours of arriving.</li>
+                        <li>If the bird is eating, active, and vocalising by day 3–4, it's adjusting well.</li>
+                    </ul>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mt-6">
+                        <p class="text-yellow-800 text-sm"><strong>⚠️ India-specific tip:</strong> If you're bringing the bird home during summer (April–June), ensure the car is pre-cooled with AC before placing the bird inside. Heat stress during transport is a common issue. In winter, cover the carrier with a light blanket to block cold drafts.</p>
+                    </div>
+                </div>
+
+                <!-- TAB 2: Bonding -->
+                <div class="tab-content" id="bonding">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Bonding With Your Bird</h2>
+                    <p class="text-gray-600 mb-6">Building trust takes patience. Hand-raised birds from Love For Cockatiels are already socialised, but they still need time to bond with their new family.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Week 1–2: Building Trust</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>Be present, not pushy</strong> — spend time near the cage without forcing interaction. Read, work on your laptop, or watch TV nearby.</li>
+                        <li><strong>Talk to your bird daily</strong> — use a calm, cheerful tone. Say their name often. Birds learn to associate your voice with safety.</li>
+                        <li><strong>Offer treats through bars</strong> — millet spray, sunflower seeds, or small pieces of apple work well. Let the bird come to you.</li>
+                        <li><strong>Avoid sudden movements</strong> — approach the cage slowly. Never grab from above (this mimics a predator).</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Week 2–4: Step-Up Training</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>Open the cage door</strong> and rest your hand inside (palm flat, fingers together). Don't chase the bird — let it approach.</li>
+                        <li><strong>Use the "Step Up" command</strong> — gently press your finger against the bird's lower chest while saying "step up." Reward immediately with a treat and praise.</li>
+                        <li><strong>Keep sessions short</strong> — 5–10 minutes, 2–3 times daily. End on a positive note.</li>
+                        <li><strong>Never punish</strong> — if the bird bites or flies away, stay calm. Punishment destroys trust instantly.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Long-Term Bonding Tips</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>Out-of-cage time</strong> — once comfortable, let your bird out daily in a bird-safe room. Supervised free-flight builds confidence.</li>
+                        <li><strong>Head scratches</strong> — most cockatiels love gentle scratches on the back of the head and cheeks. Let the bird lean into your touch.</li>
+                        <li><strong>Flock time</strong> — include your bird during family activities. Eat meals together, watch TV together. Birds are flock animals and crave inclusion.</li>
+                        <li><strong>Learn their body language</strong> — raised crest = curious/alert, flat crest = scared/angry, relaxed crest = content. Tail wagging = happy.</li>
+                    </ul>
+
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mt-6">
+                        <p class="text-emerald-800 text-sm"><strong>💡 Pro tip:</strong> Indian households are often multi-generational. Introduce family members one at a time over the first week. Too many new faces at once can overwhelm the bird. Let one person be the primary caretaker initially.</p>
+                    </div>
+                </div>
+
+                <!-- TAB 3: Diet & Nutrition -->
+                <div class="tab-content" id="diet">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Diet & Nutrition</h2>
+                    <p class="text-gray-600 mb-6">A balanced diet is the foundation of a healthy, long-lived bird. Seed-only diets are the #1 cause of health problems in pet birds in India. Here's what to feed instead.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Daily Diet Breakdown</h3>
+                    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-emerald-50 rounded-xl p-4">
+                            <p class="font-bold text-emerald-800 mb-1">60–70% Pellets or Chop</p>
+                            <p class="text-sm text-gray-700">High-quality pellets (like Zupreem, Harrison's, or locally available Promeal) provide balanced nutrition. Alternatively, prepare a "chop" — finely diced mix of vegetables and grains.</p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-xl p-4">
+                            <p class="font-bold text-yellow-800 mb-1">20–25% Fresh Vegetables</p>
+                            <p class="text-sm text-gray-700">Daily fresh veggies: spinach (palak), carrot, beetroot, cucumber, capsicum, broccoli, corn, pumpkin. Rotate varieties for different nutrients.</p>
+                        </div>
+                        <div class="bg-orange-50 rounded-xl p-4">
+                            <p class="font-bold text-orange-800 mb-1">5–10% Seeds (as treats)</p>
+                            <p class="text-sm text-gray-700">Sunflower seeds, millet, safflower — use as training rewards, not the main diet. Seeds are high in fat and low in vitamins.</p>
+                        </div>
+                        <div class="bg-pink-50 rounded-xl p-4">
+                            <p class="font-bold text-pink-800 mb-1">Occasional Fruits</p>
+                            <p class="text-sm text-gray-700">Apple (no seeds), banana, papaya, pomegranate, guava, chikoo. Limit to 2–3 times per week due to sugar content.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Indian Kitchen Superfoods for Birds</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>Sprouted moong dal</strong> — excellent protein source, easy to prepare at home</li>
+                        <li><strong>Boiled egg (small piece)</strong> — great for protein, especially for breeding birds</li>
+                        <li><strong>Ragi (finger millet)</strong> — calcium-rich, can be offered as cooked porridge</li>
+                        <li><strong>Bajra & jowar</strong> — whole millets, better than processed seed mixes</li>
+                        <li><strong>Curry leaves</strong> — safe and nutritious, birds enjoy nibbling them</li>
+                        <li><strong>Coriander (dhaniya)</strong> — fresh leaves are a favourite treat</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">🚫 Foods to NEVER Feed</h3>
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
+                        <ul class="list-disc list-inside text-red-800 space-y-1 text-sm">
+                            <li><strong>Avocado</strong> — toxic, can be fatal</li>
+                            <li><strong>Chocolate & caffeine</strong> — poisonous to birds</li>
+                            <li><strong>Onion & garlic</strong> — causes digestive issues and anaemia</li>
+                            <li><strong>Salt & fried foods</strong> — kidney damage</li>
+                            <li><strong>Apple seeds, cherry pits</strong> — contain cyanide</li>
+                            <li><strong>Milk & dairy</strong> — birds are lactose intolerant</li>
+                            <li><strong>Raw dal/beans</strong> — must be cooked or sprouted first</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Water</h3>
+                    <p class="text-gray-700 mb-4">Always provide fresh, clean water. Change it twice daily — in Indian heat, water can grow bacteria within hours. Use filtered or RO water. Avoid adding supplements to water unless prescribed by an avian vet.</p>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mt-6">
+                        <p class="text-yellow-800 text-sm"><strong>⚠️ Transitioning diet:</strong> If your bird is currently on a seed-only diet, transition gradually over 2–4 weeks. Mix pellets with seeds, slowly increasing the pellet ratio. Never starve a bird into eating new food.</p>
+                    </div>
+                </div>
+
+                <!-- TAB 4: Health & First Aid -->
+                <div class="tab-content" id="health">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Health & First Aid</h2>
+                    <p class="text-gray-600 mb-6">Birds hide illness instinctively (a survival trait from the wild). By the time you notice symptoms, the bird may have been sick for days. Early detection saves lives.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Warning Signs — See a Vet Immediately</h3>
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
+                        <ul class="list-disc list-inside text-red-800 space-y-2 text-sm">
+                            <li>Sitting fluffed up at the bottom of the cage for extended periods</li>
+                            <li>Discharge from eyes or nostrils (wet, crusty, or swollen)</li>
+                            <li>Laboured breathing, tail bobbing while breathing, open-mouth breathing</li>
+                            <li>Blood in droppings or from any body part</li>
+                            <li>Not eating or drinking for more than 12 hours</li>
+                            <li>Sudden weight loss (check the keel bone — if it's sharp/prominent, the bird is underweight)</li>
+                            <li>Vomiting (different from regurgitation — vomit sticks to head feathers)</li>
+                            <li>Seizures, loss of balance, or inability to perch</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Common Health Issues in India</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>Respiratory infections</strong> — caused by drafts, AC blowing directly on the bird, or kitchen fumes. Signs: sneezing, nasal discharge, wheezing.</li>
+                        <li><strong>Crop infections (sour crop)</strong> — from contaminated food/water in hot weather. Signs: vomiting, swollen crop, foul smell from beak.</li>
+                        <li><strong>Mites & lice</strong> — common in humid Indian climates. Signs: excessive scratching, feather loss, scaly patches on beak/feet.</li>
+                        <li><strong>Heat stress</strong> — during Indian summers (40°C+). Signs: panting, wings held away from body, lethargy.</li>
+                        <li><strong>Fatty liver disease</strong> — from seed-only diets. Signs: obesity, overgrown beak, lethargy.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">First Aid Kit for Bird Owners</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li>Styptic powder or cornstarch (to stop bleeding from broken blood feathers or nails)</li>
+                        <li>Small towel (for safely restraining the bird during emergencies)</li>
+                        <li>Heating pad or hot water bottle (for keeping a sick bird warm)</li>
+                        <li>Electrolyte solution (like ORS — a few drops in water for dehydrated birds)</li>
+                        <li>Digital kitchen scale (to monitor weight weekly — even 5g loss matters)</li>
+                        <li>Contact number of an avian vet (find one BEFORE you need one)</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Healthy Droppings Guide</h3>
+                    <p class="text-gray-700 mb-4">Normal cockatiel droppings have three parts: a dark green/brown solid (faeces), white paste (urates), and clear liquid (urine). Changes to watch for:</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>All-green watery</strong> — bird may not be eating (starvation droppings)</li>
+                        <li><strong>Yellow or bright green urates</strong> — possible liver issue</li>
+                        <li><strong>Red/black in faeces</strong> — internal bleeding, emergency</li>
+                        <li><strong>Undigested seeds</strong> — digestive problem, possible infection</li>
+                    </ul>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mt-6">
+                        <p class="text-yellow-800 text-sm"><strong>⚠️ Finding an avian vet in India:</strong> Avian specialists are rare. Look for vets experienced with birds in your city. In Delhi NCR, ask us for recommendations — we maintain a list of trusted avian vets. Regular dog/cat vets may not have bird-specific knowledge.</p>
+                    </div>
+                </div>
+
+                <!-- TAB 5: Environment & Safety -->
+                <div class="tab-content" id="environment">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Environment & Safety</h2>
+                    <p class="text-gray-600 mb-6">Your bird's environment directly impacts its health and happiness. Here's how to create a safe, comfortable home — especially in Indian conditions.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Cage Setup</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>Size</strong> — minimum 18" × 18" × 24" for a single cockatiel. Bigger is always better. The bird should be able to fully spread its wings.</li>
+                        <li><strong>Bar spacing</strong> — 1/2 inch (12mm) for cockatiels and smaller birds. Larger spacing risks head entrapment.</li>
+                        <li><strong>Material</strong> — stainless steel or powder-coated iron. Avoid zinc-coated (galvanised) cages — zinc is toxic to birds.</li>
+                        <li><strong>Perches</strong> — use natural wood perches of varying diameters (neem, guava, or mango wood are safe and locally available). Avoid sandpaper perch covers.</li>
+                        <li><strong>Placement</strong> — at eye level, against a wall (gives security), away from kitchen and bathroom.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Temperature & Climate (India-Specific)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>Ideal range</strong> — 22°C to 30°C. Cockatiels tolerate Indian room temperature well but struggle above 38°C.</li>
+                        <li><strong>Summer (April–June)</strong> — provide shade, keep water fresh (change 3x daily), offer wet leafy greens for hydration. A shallow water dish for bathing helps cool down.</li>
+                        <li><strong>Monsoon (July–Sept)</strong> — humidity promotes fungal growth. Keep cage dry, increase ventilation, check food for mould daily.</li>
+                        <li><strong>Winter (Nov–Feb)</strong> — cover cage at night with a breathable cloth. Avoid placing near open windows. No direct heater/blower on the bird.</li>
+                        <li><strong>AC usage</strong> — never point AC directly at the cage. Maintain 24–26°C. Sudden temperature drops cause respiratory infections.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">🚫 Household Dangers</h3>
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
+                        <ul class="list-disc list-inside text-red-800 space-y-2 text-sm">
+                            <li><strong>Non-stick cookware (Teflon)</strong> — fumes from overheated non-stick pans kill birds within minutes. Use stainless steel or iron cookware if your bird is near the kitchen.</li>
+                            <li><strong>Incense sticks (agarbatti) & dhoop</strong> — smoke irritates bird lungs severely. Never burn near the bird.</li>
+                            <li><strong>Mosquito coils & liquid repellents (Good Knight, All Out)</strong> — toxic fumes. Use a mosquito net over the cage instead.</li>
+                            <li><strong>Room fresheners & aerosol sprays</strong> — perfumes, deodorants, Lysol — all dangerous.</li>
+                            <li><strong>Ceiling fans</strong> — a leading cause of bird injuries in India. Turn off fans when bird is out of cage, or use fan guards.</li>
+                            <li><strong>Open windows without mesh</strong> — birds can fly out. Install bird-safe mesh on windows.</li>
+                            <li><strong>Other pets</strong> — cats and dogs are natural predators. Never leave unsupervised.</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Light & Sleep</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li>Birds need 10–12 hours of uninterrupted sleep in complete darkness.</li>
+                        <li>Cover the cage at night with a dark, breathable cloth.</li>
+                        <li>Avoid keeping the bird in a room where the TV runs late at night.</li>
+                        <li>Some natural sunlight (indirect, morning sun) is beneficial for vitamin D synthesis.</li>
+                    </ul>
+                </div>
+
+                <!-- TAB 6: Grooming & Hygiene -->
+                <div class="tab-content" id="grooming">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Grooming & Hygiene</h2>
+                    <p class="text-gray-600 mb-6">Birds are naturally clean animals, but they need your help to maintain good hygiene in captivity.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Bathing</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>Frequency</strong> — offer a bath 2–3 times per week. Daily in summer, less in winter.</li>
+                        <li><strong>Method</strong> — shallow dish of lukewarm water (not cold), or a gentle mist spray from a clean spray bottle. Let the bird choose to bathe — never force it.</li>
+                        <li><strong>Timing</strong> — always bathe in the morning so feathers dry fully before nightfall. Wet feathers at night can cause chills.</li>
+                        <li><strong>Never use soap</strong> — plain water only. Bird feathers have natural oils that soap strips away.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Nail Trimming</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li>If nails get too long (snagging on fabric, difficulty perching), they need trimming.</li>
+                        <li>Use bird-specific nail clippers or small human nail clippers.</li>
+                        <li>Trim only the tip — avoid the quick (blood vessel visible as a dark line in light-coloured nails).</li>
+                        <li>Keep styptic powder or cornstarch handy in case of accidental bleeding.</li>
+                        <li><strong>Natural alternative</strong> — rough-textured perches (concrete or natural bark) help keep nails filed naturally.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Cage Cleaning Schedule</h3>
+                    <div class="grid sm:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-emerald-50 rounded-xl p-4">
+                            <p class="font-bold text-emerald-800 mb-1">Daily</p>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Change water (2–3x in summer)</li>
+                                <li>• Remove uneaten fresh food</li>
+                                <li>• Wipe food/water bowls</li>
+                                <li>• Replace cage liner/newspaper</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 rounded-xl p-4">
+                            <p class="font-bold text-blue-800 mb-1">Weekly</p>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Wash all bowls with hot water</li>
+                                <li>• Scrub perches</li>
+                                <li>• Wipe cage bars</li>
+                                <li>• Clean cage tray thoroughly</li>
+                            </ul>
+                        </div>
+                        <div class="bg-purple-50 rounded-xl p-4">
+                            <p class="font-bold text-purple-800 mb-1">Monthly</p>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Deep clean entire cage</li>
+                                <li>• Disinfect with bird-safe cleaner (vinegar + water works)</li>
+                                <li>• Replace worn perches/toys</li>
+                                <li>• Check for rust or damage</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Feather Care</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li><strong>Moulting</strong> — birds shed and regrow feathers 1–2 times per year. They may be irritable and need extra protein during this time. Offer boiled egg or sprouted dal.</li>
+                        <li><strong>Pin feathers</strong> — new feathers grow in a waxy sheath. Birds appreciate gentle help removing sheaths on their head (where they can't reach).</li>
+                        <li><strong>Feather plucking</strong> — if your bird pulls out its own feathers, it's a sign of stress, boredom, or illness. Consult an avian vet.</li>
+                    </ul>
+
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mt-6">
+                        <p class="text-emerald-800 text-sm"><strong>💡 Cleaning tip for Indian homes:</strong> Avoid using phenyl (Lizol) or strong chemical cleaners near the cage. Use a 50:50 mix of white vinegar and water for safe disinfection. Neem water is also a natural, bird-safe option for wiping cage bars.</p>
+                    </div>
+                </div>
+
+            </div> <!-- end tab content container -->
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 bg-emerald-50 text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Need More Help?</h2>
+            <p class="text-gray-600 mb-6">We provide free care guidance to all our bird parents. Reach out anytime on WhatsApp for diet plans, health concerns, or bonding tips.</p>
+            <a href="https://wa.me/917291020221?text=Hi%2C%20I%20need%20help%20with%20bird%20care" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 text-white rounded-full font-bold text-lg hover:bg-emerald-600 transition shadow-lg">
+                <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+                Chat With Us on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm text-gray-500 border-t border-gray-100">
+        <p>&copy; 2025 Love For Cockatiels. All rights reserved.</p>
+        <a href="/" class="text-emerald-600 font-medium hover:underline mt-2 inline-block">← Back to Home</a>
+    </footer>
+
+    <!-- Tab switching script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.dataset.tab;
+
+                    // Update active tab button
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    // Show target content
+                    contents.forEach(c => c.classList.remove('active'));
+                    document.getElementById(target).classList.add('active');
+
+                    // Update URL hash for shareability
+                    history.replaceState(null, '', '#' + target);
+                });
+            });
+
+            // Handle direct URL hash navigation
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                const targetTab = document.querySelector(`[data-tab="${hash}"]`);
+                if (targetTab) targetTab.click();
+            }
+        });
+    </script>
+</body>
+</html>
