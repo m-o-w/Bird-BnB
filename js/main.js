@@ -41,11 +41,18 @@ function initSmoothScroll() {
     
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            // Bail if the href isn't a real fragment anymore.
+            // content.js updates placeholder href="#" links to external URLs
+            // (e.g. wa.me) after load — let those navigate normally.
+            if (!href || href === '#' || !href.startsWith('#')) {
+                return;
+            }
             e.preventDefault();
             if (menu) {
                 menu.classList.add('hidden'); // Close mobile menu if open
             }
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth'
