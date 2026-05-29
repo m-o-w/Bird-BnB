@@ -152,7 +152,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #gallery-grid {
     overflow: visible;
-    padding-top: 6rem;
+    padding-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    #gallery-grid {
+        padding-top: 6rem;
+    }
 }
 
 #gallery {
